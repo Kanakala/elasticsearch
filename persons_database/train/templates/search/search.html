@@ -1,0 +1,14 @@
+<form type="get" action=".">
+    {{form.as_p}}
+    <button type="submit">Search</button>
+
+
+{% if query %}
+{% for h in codes %}
+<h1>{{ h.name }}</h1>
+<p>
+    {{ h.code }}
+</p>
+{% endfor %}
+{% endif %}
+</form>
